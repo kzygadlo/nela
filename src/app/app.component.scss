@@ -22,6 +22,10 @@
   text-transform: none;
 }
 
+.app-button.active {
+  background-color: rgba(252, 67, 125, 0.12); /* Możesz dostosować kolor tła */
+}
+
 .app-title, 
 .important-word {
   font-weight: bold;
@@ -35,7 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 64px);
+  height: 100vh; /* Ustawienie wysokości na całą wysokość ekranu */
   padding: 20px;
 }
 
@@ -74,12 +78,13 @@ mat-divider.responsive-divider {
   height: 80%;
   align-self: center;
   width: 1px;
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: #fbcbe1;
 }
 
 @media screen and (max-width: 768px) {
   .main-content {
     flex-direction: column; /* Zmiana na kolumnę na mniejszych ekranach */
+    align-items: center; /* Wyśrodkowanie w pionie na mniejszych ekranach */
   }
 
   .left-column {
@@ -88,7 +93,8 @@ mat-divider.responsive-divider {
 
   .image-text-container {
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Wyśrodkowanie w poziomie na małych ekranach */
+    text-align: center; /* Wyśrodkowanie tekstu */
   }
 
   mat-divider.responsive-divider {
