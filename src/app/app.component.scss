@@ -1,59 +1,53 @@
-  .nela-photo {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .example-spacer {
-    flex: 1 1 auto;
-  }
-
-.menu-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 8px; /* Odstęp między ikoną a tekstem */
-  vertical-align: middle; /* Wyrównanie ikony do środka */
-}
-
-.app-button {
-  display: flex;
-  align-items: center;
-  text-transform: none; /* Wyłącz kapitalizację, jeśli jest domyślnie ustawiona */
-}
-
-.app-title {
-  font-weight: bold; /* Dostosuj styl tekstu według potrzeb */
+.nela-photo {
+  width: 150px;
+  height: 150px;
 }
 
 .example-spacer {
   flex: 1 1 auto;
 }
 
-.right-button {
-  text-transform: none; /* Wyłącz kapitalizację */
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
+.app-button {
+  display: flex;
+  align-items: center;
+  text-transform: none;
+}
+
+.app-title, 
+.important-word {
+  font-weight: bold;
+}
+
+.right-button {
+  text-transform: none;
+}
 
 .main-content {
   display: flex;
-  justify-content: center; /* Edytuj */
-  align-items: center; /* Edytuj */
-  height: calc(100vh - 64px); /* Odejmij wysokość paska narzędzi */
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+  padding: 20px;
+}
+
+.left-column, .right-column {
+  flex: 1;
   padding: 20px;
 }
 
 .left-column {
-  flex: 1;
-  padding: 20px;
-  display: flex; /* Dodaj */
-  justify-content: flex-end; /* Edytuj - aby wyśrodkować do strony dividera */
-  align-items: center; /* Dodaj - aby wyśrodkować do strony dividera */
-}
-
-.right-column {
-  flex: 1;
-  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .image-text-container {
@@ -72,12 +66,17 @@
   font-weight: bold;
 }
 
-mat-divider[vertical="true"] {
-  height: 80%; /* Możesz dostosować wysokość dividera */
-  align-self: center;
+.mat-toolbar {
+  background-color: #fbcbe1;
 }
 
-/* Media query dla mniejszych ekranów (np. telefony) */
+mat-divider.responsive-divider {
+  height: 80%;
+  align-self: center;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
 @media screen and (max-width: 768px) {
   .main-content {
     flex-direction: column; /* Zmiana na kolumnę na mniejszych ekranach */
@@ -92,9 +91,9 @@ mat-divider[vertical="true"] {
     align-items: center;
   }
 
-  mat-divider[vertical="true"] {
-    height: 1px; /* Zmiana na horyzontalny divider na mniejszych ekranach */
-    width: 80%;
-    margin: 20px auto;
+  mat-divider.responsive-divider {
+    width: 80%; /* Zmiana szerokości dividera na horyzontalny */
+    height: 1px; /* Zmiana wysokości dividera na horyzontalny */
+    margin: 20px 0; /* Dodanie odstępów dla lepszej widoczności */
   }
 }
