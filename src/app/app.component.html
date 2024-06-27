@@ -1,24 +1,56 @@
+
+
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+  <button mat-button class="app-button" aria-label="Nela App Home" (click)="goToHome()">
+    <img src="assets/favicon.ico" alt="Menu Icon" class="menu-icon">
+    <span class="app-title">Nela App</span>
   </button>
-  <span>Nela App</span>
+
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+
+  <button mat-button class="right-button" aria-label="Button 1">
+    Galeria
+  </button>
+
+  <button mat-button class="right-button" aria-label="Button 2">
+    Informacje
+  </button>
+
+  <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+
+  <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button>
+
 </mat-toolbar>
-    
-    
-    <div class="left-side">
+
+
+<div class="main-content">
+  <div class="left-column">
+    <div class="image-text-container">
+      <img src="assets/nela_main.jpg" alt="Sample Image" class="content-image">
+      <span class="content-title">Nela Barska</span>
+    </div>
+  </div>
+  <mat-divider vertical="true"></mat-divider>
+  <div class="right-column">
+    <p>Congratulations! Your app is running. 🎉</p>
+    <p>Twoja data urodzenia: {{ dateOfBirth | date: 'dd/MM/yyyy' }}</p>
+    <p>Twój pesel: {{ pesel }}</p>
+    <p>Twój nr karty medicover: {{ medicover }}</p>
+
+
+  </div>
+</div>
+
+    <!-- <div class="left-side">
       <img src="assets/nela_main.jpg" alt="Nela photo" class="nela-photo">
       <h1>Hello, {{ name }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
       <p>Your birth date is: {{ dateOfBirth | date: 'dd/MM/yyyy' }}</p>
-    </div>
+    </div> -->
 
 
 <router-outlet />

@@ -6,3 +6,95 @@
   .example-spacer {
     flex: 1 1 auto;
   }
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px; /* Odstęp między ikoną a tekstem */
+  vertical-align: middle; /* Wyrównanie ikony do środka */
+}
+
+.app-button {
+  display: flex;
+  align-items: center;
+  text-transform: none; /* Wyłącz kapitalizację, jeśli jest domyślnie ustawiona */
+}
+
+.app-title {
+  font-weight: bold; /* Dostosuj styl tekstu według potrzeb */
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.right-button {
+  text-transform: none; /* Wyłącz kapitalizację */
+}
+
+
+.main-content {
+  display: flex;
+  justify-content: center; /* Edytuj */
+  align-items: center; /* Edytuj */
+  height: calc(100vh - 64px); /* Odejmij wysokość paska narzędzi */
+  padding: 20px;
+}
+
+.left-column {
+  flex: 1;
+  padding: 20px;
+  display: flex; /* Dodaj */
+  justify-content: flex-end; /* Edytuj - aby wyśrodkować do strony dividera */
+  align-items: center; /* Dodaj - aby wyśrodkować do strony dividera */
+}
+
+.right-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.content-image {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.content-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+mat-divider[vertical="true"] {
+  height: 80%; /* Możesz dostosować wysokość dividera */
+  align-self: center;
+}
+
+/* Media query dla mniejszych ekranów (np. telefony) */
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Zmiana na kolumnę na mniejszych ekranach */
+  }
+
+  .left-column {
+    justify-content: center; /* Wyśrodkowanie w pionie na mniejszych ekranach */
+  }
+
+  .image-text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  mat-divider[vertical="true"] {
+    height: 1px; /* Zmiana na horyzontalny divider na mniejszych ekranach */
+    width: 80%;
+    margin: 20px auto;
+  }
+}
